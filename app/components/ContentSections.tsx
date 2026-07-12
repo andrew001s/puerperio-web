@@ -29,7 +29,7 @@ function SectionImage({ image, variant = "portrait" }: SectionImageProps) {
         alt={image.alt}
         fill
         sizes="(min-width: 768px) 260px, 100vw"
-        className="object-cover"
+        className={variant === "wide" ? "object-contain" : "object-contain md:object-cover"}
       />
     </Reveal>
   );

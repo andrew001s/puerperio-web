@@ -25,7 +25,7 @@ export function AlarmSection() {
                   className="flex gap-3 rounded-lg border border-black/15 bg-white/10 p-4"
                   delay={index * 0.035}
                 >
-                  <span className="mt-1 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-coral text-deep">
+                  <span className="mt-1 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-coral text-white">
                     <svg aria-hidden="true" viewBox="0 0 20 20" className="size-3">
                       <path
                         fill="currentColor"
@@ -49,7 +49,7 @@ export function AlarmSection() {
               alt="Ilustración educativa con signos de alarma durante el puerperio."
               fill
               sizes="(min-width: 1024px) 280px, 100vw"
-              className="object-cover"
+              className="object-contain lg:object-cover"
             />
           </Reveal>
         </div>

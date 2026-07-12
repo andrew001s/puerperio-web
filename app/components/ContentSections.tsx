@@ -18,8 +18,8 @@ function SectionImage({ image, variant = "portrait" }: SectionImageProps) {
     <Reveal
       className={
         variant === "wide"
-          ? "relative aspect-[19/9] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm"
-          : "relative aspect-[4/3] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm md:aspect-[3/4]"
+          ? "relative aspect-[19/9]"
+          : "relative aspect-[4/3] md:aspect-[3/4]"
       }
       delay={0.08}
       y={18}
@@ -70,7 +70,7 @@ function BentoItemsWithImage({ items, image }: BentoItemsWithImageProps) {
       ))}
 
       <Reveal
-        className={`relative min-h-72 overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm md:col-start-3 md:row-start-1 md:min-h-full ${imageRows}`}
+        className={`relative min-h-72 md:col-start-3 md:row-start-1 md:min-h-full ${imageRows}`}
         delay={0.08}
         y={18}
       >

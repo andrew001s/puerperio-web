@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { projectInfo } from "@/app/data/puerperio";
+import { Reveal } from "./MotionPrimitives";
 
 const footerDetails = [
   { label: "Instituto", value: projectInfo.institute },
@@ -55,7 +56,7 @@ export function ProjectFooter() {
   return (
     <footer className="bg-slate-100 px-5 py-16 text-foreground sm:px-8 lg:px-12">
       <div className="mx-auto max-w-6xl">
-        <div className="relative overflow-hidden bg-white px-7 pb-32 pt-8 shadow-2xl shadow-slate-300/70 sm:px-10 lg:px-12">
+        <Reveal className="relative overflow-hidden bg-white px-7 pb-32 pt-8 shadow-2xl shadow-slate-300/70 sm:px-10 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
             <div>
               <div className="relative mb-6 h-12 w-56">
@@ -118,7 +119,7 @@ export function ProjectFooter() {
           </div>
 
           <FlowerGarden />
-        </div>
+        </Reveal>
       </div>
     </footer>
   );

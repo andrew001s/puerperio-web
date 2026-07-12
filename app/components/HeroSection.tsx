@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Reveal } from "./MotionPrimitives";
 
 export function HeroSection() {
   return (
@@ -22,7 +23,7 @@ export function HeroSection() {
         />
       </div>
       <div className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.7fr]">
-        <div>
+        <Reveal y={18}>
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-teal-800">
             Guía educativa posparto
           </p>
@@ -48,9 +49,9 @@ export function HeroSection() {
               Ver signos de alarma
             </a>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="hidden justify-self-end lg:block">
+        <Reveal className="hidden justify-self-end lg:block" delay={0.12} y={34}>
           <div className="relative aspect-[0.68] w-[320px] overflow-hidden rounded-lg border border-white/80 bg-white shadow-2xl shadow-teal-900/15">
             <Image
               src="/images/image.jpeg"
@@ -60,7 +61,7 @@ export function HeroSection() {
               className="object-cover"
             />
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

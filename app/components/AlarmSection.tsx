@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { alarms } from "@/app/data/puerperio";
+import { MotionListItem, Reveal } from "./MotionPrimitives";
 
 export function AlarmSection() {
   return (
     <section id="alarmas" className="scroll-mt-28 border-t border-slate-200/80 py-14">
       <div className="rounded-lg bg-deep p-6 text-black sm:p-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_280px] lg:items-start">
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-black">
+          <Reveal>
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-coral-dark">
               06 · Atención inmediata
             </p>
             <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight text-black sm:text-4xl">
@@ -18,10 +19,11 @@ export function AlarmSection() {
               posible.
             </p>
             <ul className="mt-8 grid gap-3 md:grid-cols-2">
-              {alarms.map((alarm) => (
-                <li
+              {alarms.map((alarm, index) => (
+                <MotionListItem
                   key={alarm}
                   className="flex gap-3 rounded-lg border border-black/15 bg-white/10 p-4"
+                  delay={index * 0.035}
                 >
                   <span className="mt-1 inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-coral text-deep">
                     <svg aria-hidden="true" viewBox="0 0 20 20" className="size-3">
@@ -32,12 +34,16 @@ export function AlarmSection() {
                     </svg>
                   </span>
                   <span className="leading-7 text-black/90">{alarm}</span>
-                </li>
+                </MotionListItem>
               ))}
             </ul>
-          </div>
+          </Reveal>
 
-          <div className="relative aspect-[3/4] overflow-hidden rounded-lg border border-black/20 bg-black/10 shadow-xl shadow-black/10">
+          <Reveal
+            className="relative aspect-[3/4] overflow-hidden rounded-lg border border-black/20 bg-black/10 shadow-xl shadow-black/10"
+            delay={0.1}
+            y={26}
+          >
             <Image
               src="/images/signo-alarma.jpeg"
               alt="Ilustración educativa con signos de alarma durante el puerperio."
@@ -45,7 +51,7 @@ export function AlarmSection() {
               sizes="(min-width: 1024px) 280px, 100vw"
               className="object-cover"
             />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

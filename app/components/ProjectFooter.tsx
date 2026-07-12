@@ -68,7 +68,7 @@ export function ProjectFooter() {
                   className="object-contain object-left"
                 />
               </div>
-              <p className="mt-5 max-w-xs text-sm leading-7 text-muted">
+              <p className="mt-5 max-w-xs text-sm leading-7 text-muted-foreground">
                 Proyecto académico sobre cuidados, etapas y signos de alarma
                 durante el puerperio.
               </p>
@@ -80,7 +80,7 @@ export function ProjectFooter() {
                 {footerDetails.slice(1, 3).map((detail) => (
                   <div key={detail.label}>
                     <dt className="font-bold text-teal-800">{detail.label}</dt>
-                    <dd className="text-muted">{detail.value}</dd>
+                    <dd className="text-muted-foreground">{detail.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -92,7 +92,7 @@ export function ProjectFooter() {
                 {[footerDetails[0], footerDetails[3], footerDetails[4]].map((detail) => (
                   <div key={detail.label}>
                     <dt className="font-bold text-teal-800">{detail.label}</dt>
-                    <dd className="text-muted">{detail.value}</dd>
+                    <dd className="text-muted-foreground">{detail.value}</dd>
                   </div>
                 ))}
               </dl>
@@ -100,7 +100,7 @@ export function ProjectFooter() {
 
             <div>
               <h3 className="text-sm font-black text-foreground">Integrantes</h3>
-              <ul className="mt-4 grid gap-2 text-sm leading-6 text-muted">
+              <ul className="mt-4 grid gap-2 text-sm leading-6 text-muted-foreground">
                 {projectInfo.members.map((member) => (
                   <li key={member}>{member}</li>
                 ))}
@@ -108,7 +108,7 @@ export function ProjectFooter() {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col gap-4 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-12 flex flex-col gap-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
             <p>© {projectInfo.year} {projectInfo.theme}. Todos los derechos reservados.</p>
             <div className="flex gap-3" aria-label="Decoración de redes sociales">
               <span className="size-3 rounded-full bg-[#3b82f6]" />

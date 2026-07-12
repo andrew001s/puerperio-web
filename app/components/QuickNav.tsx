@@ -12,7 +12,7 @@ export function QuickNav() {
             <a
               key={link.href}
               href={link.href}
-              className="shrink-0 rounded-full border border-slate-200 px-4 py-2 text-sm font-bold text-muted transition-colors duration-200 hover:border-teal-700 hover:bg-teal-50 hover:text-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-800/20"
+              className="shrink-0 rounded-full border border-slate-200 px-4 py-2 text-sm font-bold text-muted-foreground transition-colors duration-200 hover:border-teal-700 hover:bg-teal-50 hover:text-teal-900 focus:outline-none focus:ring-4 focus:ring-teal-800/20"
             >
               {link.label}
             </a>

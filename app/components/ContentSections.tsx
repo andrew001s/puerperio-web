@@ -65,7 +65,7 @@ function BentoItemsWithImage({ items, image }: BentoItemsWithImageProps) {
               />
             </svg>
           </span>
-          <span className="leading-7 text-muted">{item}</span>
+          <span className="leading-7 text-muted-foreground">{item}</span>
         </Reveal>
       ))}
 
@@ -103,7 +103,7 @@ export function ContentSections() {
               <div className="grid gap-6 md:grid-cols-[1fr_260px] md:items-start">
                 <div>
                   {"body" in section && (
-                    <p className="max-w-3xl text-lg leading-8 text-muted">
+                    <p className="max-w-3xl text-lg leading-8 text-muted-foreground">
                       {section.body}
                     </p>
                   )}
@@ -119,7 +119,7 @@ export function ContentSections() {
                           <h3 className="font-serif text-2xl font-semibold text-teal-900">
                             {stage.label}
                           </h3>
-                          <p className="mt-3 leading-7 text-muted">{stage.detail}</p>
+                          <p className="mt-3 leading-7 text-muted-foreground">{stage.detail}</p>
                         </Reveal>
                       ))}
                     </div>

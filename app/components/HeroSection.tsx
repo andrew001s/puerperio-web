@@ -30,7 +30,7 @@ export function HeroSection() {
           <h1 className="mt-5 max-w-4xl font-serif text-5xl font-semibold leading-[1.02] text-foreground sm:text-6xl lg:text-7xl">
             Puerperio
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
             Una guía breve, clara y organizada para reconocer los cambios,
             cuidados, signos de alarma y recomendaciones durante las primeras
             seis semanas después del parto.

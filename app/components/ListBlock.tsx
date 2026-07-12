@@ -21,7 +21,7 @@ export function ListBlock({ items }: ListBlockProps) {
               />
             </svg>
           </span>
-          <span className="leading-7 text-muted">{item}</span>
+          <span className="leading-7 text-muted-foreground">{item}</span>
         </MotionListItem>
       ))}
     </ul>

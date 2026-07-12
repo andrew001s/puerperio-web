@@ -14,7 +14,7 @@ export function VideoIntroSection() {
           <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight text-foreground">
             Conoce más sobre el puerperio
           </h2>
-          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted">
+          <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground">
             Mira este recurso antes de continuar con la guía para reforzar los
             puntos principales.
           </p>

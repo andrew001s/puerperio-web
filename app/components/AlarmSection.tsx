@@ -6,7 +6,7 @@ import { SectionShell } from "./SectionShell";
 export function AlarmSection() {
   return (
     <SectionShell id="alarmas" eyebrow="06" title="Signos de alarma">
-      <p className="max-w-3xl text-lg leading-8 text-muted">
+      <p className="max-w-3xl text-lg leading-8 text-muted-foreground">
         Si aparece alguno de estos signos, busca atención médica lo antes posible.
       </p>
 
@@ -25,7 +25,7 @@ export function AlarmSection() {
                 />
               </svg>
             </span>
-            <span className="leading-7 text-muted">{alarm}</span>
+            <span className="leading-7 text-muted-foreground">{alarm}</span>
           </MotionListItem>
         ))}
 

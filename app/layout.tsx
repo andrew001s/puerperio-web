@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "signos de alarma puerperio",
     "cambios fisiológicos posparto",
     "complicaciones posparto",
-    "enfermería materno infantil",
+    "enfermería materno Infantil",
   ],
   authors: [{ name: "Carrera de Enfermería" }],
   creator: "Instituto Superior Tecnológico Universitario Libertad",

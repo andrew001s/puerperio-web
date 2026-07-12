@@ -12,6 +12,15 @@ export function HeroSection() {
         className="absolute inset-0 -z-20 object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-white via-white/88 to-white/20" />
+      <div className="absolute left-5 top-5 z-10 h-10 w-44 rounded-l px-3 backdrop-blur sm:right-8 sm:top-8 sm:h-12 sm:w-56 lg:right-12">
+        <Image
+          src="/images/instituto.png"
+          alt="Logo del Instituto Superior Tecnológico Universitario Libertad."
+          fill
+          sizes="(min-width: 640px) 224px, 176px"
+          className="object-contain p-2"
+        />
+      </div>
       <div className="mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.7fr]">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.28em] text-teal-800">

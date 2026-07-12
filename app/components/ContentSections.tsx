@@ -1,7 +1,36 @@
+import Image from "next/image";
 import { sections } from "@/app/data/puerperio";
 import { AlarmSection } from "./AlarmSection";
 import { ListBlock } from "./ListBlock";
 import { SectionShell } from "./SectionShell";
+
+type SectionImageProps = {
+  image: {
+    src: string;
+    alt: string;
+  };
+  variant?: "portrait" | "wide";
+};
+
+function SectionImage({ image, variant = "portrait" }: SectionImageProps) {
+  return (
+    <div
+      className={
+        variant === "wide"
+          ? "relative aspect-[19/9] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm"
+          : "relative aspect-[4/3] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm md:aspect-[3/4]"
+      }
+    >
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        sizes="(min-width: 768px) 260px, 100vw"
+        className="object-cover"
+      />
+    </div>
+  );
+}
 
 export function ContentSections() {
   return (
@@ -14,27 +43,32 @@ export function ContentSections() {
             eyebrow={section.eyebrow}
             title={section.title}
           >
-            {"body" in section && (
-              <p className="max-w-3xl text-lg leading-8 text-muted">
-                {section.body}
-              </p>
-            )}
-            {"items" in section && section.items && <ListBlock items={section.items} />}
-            {"timeline" in section && section.timeline && (
-              <div className="grid gap-4 md:grid-cols-3">
-                {section.timeline.map((stage) => (
-                  <div
-                    key={stage.label}
-                    className="rounded-lg border border-teal-700/20 bg-white p-5 shadow-sm"
-                  >
-                    <h3 className="font-serif text-2xl font-semibold text-teal-900">
-                      {stage.label}
-                    </h3>
-                    <p className="mt-3 leading-7 text-muted">{stage.detail}</p>
+            <div className="grid gap-6 md:grid-cols-[1fr_260px] md:items-start">
+              <div>
+                {"body" in section && (
+                  <p className="max-w-3xl text-lg leading-8 text-muted">
+                    {section.body}
+                  </p>
+                )}
+                {"items" in section && section.items && <ListBlock items={section.items} />}
+                {"timeline" in section && section.timeline && (
+                  <div className="grid gap-4">
+                    {section.timeline.map((stage) => (
+                      <div
+                        key={stage.label}
+                        className="rounded-lg border border-teal-700/20 bg-white p-5 shadow-sm"
+                      >
+                        <h3 className="font-serif text-2xl font-semibold text-teal-900">
+                          {stage.label}
+                        </h3>
+                        <p className="mt-3 leading-7 text-muted">{stage.detail}</p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
-            )}
+              {"image" in section && section.image && <SectionImage image={section.image} />}
+            </div>
           </SectionShell>
         ))}
 
@@ -47,7 +81,19 @@ export function ContentSections() {
             eyebrow={section.eyebrow}
             title={section.title}
           >
-            {"items" in section && section.items && <ListBlock items={section.items} />}
+            {section.id === "recomendaciones" ? (
+              <div className="grid gap-6">
+                {"image" in section && section.image && (
+                  <SectionImage image={section.image} variant="wide" />
+                )}
+                {"items" in section && section.items && <ListBlock items={section.items} />}
+              </div>
+            ) : (
+              <div className="grid gap-6 md:grid-cols-[1fr_260px] md:items-start">
+                {"items" in section && section.items && <ListBlock items={section.items} />}
+                {"image" in section && section.image && <SectionImage image={section.image} />}
+              </div>
+            )}
           </SectionShell>
         ))}
       </article>

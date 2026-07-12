@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projectInfo } from "@/app/data/puerperio";
 
 const footerDetails = [
@@ -57,18 +58,14 @@ export function ProjectFooter() {
         <div className="relative overflow-hidden bg-white px-7 pb-32 pt-8 shadow-2xl shadow-slate-300/70 sm:px-10 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
             <div>
-              <div className="flex items-center gap-3">
-                <span className="inline-flex size-8 items-center justify-center rounded-full border-2 border-coral text-coral">
-                  <svg aria-hidden="true" viewBox="0 0 24 24" className="size-4">
-                    <path
-                      fill="currentColor"
-                      d="M12 2.5 14.7 8l6 .9-4.3 4.2 1 5.9-5.4-2.8L6.6 19l1-5.9L3.3 8.9l6-.9z"
-                    />
-                  </svg>
-                </span>
-                <p className="text-lg font-black uppercase tracking-tight text-foreground">
-                  {projectInfo.theme}
-                </p>
+              <div className="relative mb-6 h-12 w-56">
+                <Image
+                  src="/images/instituto.png"
+                  alt="Logo del Instituto Superior Tecnológico Universitario Libertad."
+                  fill
+                  sizes="224px"
+                  className="object-contain object-left"
+                />
               </div>
               <p className="mt-5 max-w-xs text-sm leading-7 text-muted">
                 Proyecto académico sobre cuidados, etapas y signos de alarma

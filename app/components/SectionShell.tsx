@@ -16,9 +16,6 @@ export function SectionShell({ id, eyebrow, title, children }: SectionShellProps
           <span className="inline-flex size-11 items-center justify-center rounded-full border border-teal-700/30 bg-teal-50 text-sm font-bold text-teal-800">
             {eyebrow}
           </span>
-          <p className="mt-0 text-xs font-bold uppercase tracking-[0.22em] text-coral lg:mt-4">
-            Puerperio
-          </p>
         </div>
         <div>
           <h2 className="font-serif text-3xl font-semibold leading-tight text-foreground sm:text-4xl">

@@ -13,11 +13,13 @@ const imagePaths = [
   "/images/recomendaciones.jpeg",
 ];
 
+const pageLastModified = new Date("2026-07-12");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: siteConfig.url,
-      lastModified: new Date("2026-07-11"),
+      lastModified: pageLastModified,
       changeFrequency: "monthly",
       priority: 1,
       images: imagePaths.map((path) => `${siteConfig.url}${path}`),
